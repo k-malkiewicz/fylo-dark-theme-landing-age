@@ -8,7 +8,7 @@ This is a solution to the [Fylo dark theme landing page challenge on Frontend Me
 
 ## Links
 
-- Live Site URL (I use Netlify for websites hosting) ⇒ 
+- Live Site URL (I use Netlify for websites hosting) ⇒ https://fylo-dark-lp-km9.netlify.app
 
 ## Built With
 
