@@ -1,0 +1,152 @@
+@import '../../../variables';
+
+.team_section {
+    background: $bg-main;
+    padding: 9.25rem 6.25rem 22.1875rem;
+    position: relative;
+    &_main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3.4375rem;
+    }
+    &_info {
+        h2 {
+            width: 80%;
+            font-size: 2.5rem;
+            margin: 2.5rem 0 1.5625rem;
+        }
+        p {
+            margin: 0 0 .875rem;
+            line-height: 1.5;
+        }
+        a {
+            width: 10.4375rem;
+            margin: 1.5625rem 0 0;
+            color: hsl(176, 68%, 64%);
+            display: flex;
+            align-items: center;
+            gap: .3125rem;
+            position: relative;
+            &:hover {
+                color: $font-color-primary;
+                &::after {
+                    background: $font-color-primary;
+                }
+                & img {
+                    filter: grayscale(100);
+                }
+            }
+            &::after {
+                content: '';
+                width: 98%;
+                height: .0625rem;
+                background: hsl(176, 68%, 64%);
+                position: absolute;
+                bottom: -0.3125rem;
+            }
+        }
+    }
+}
+
+.testimonials {
+    margin: 10.9375rem 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    position: relative;
+    &::before {
+        content: url('../../../assets/images/bg-quotes.png');
+        position: absolute;
+        top: -2.25rem;
+        left: 1.4375rem;
+        z-index: 0;
+    }
+}
+
+.testimonial_card {
+    z-index: 2;
+    width: 22.5rem;
+    background: $bg-testimonials;
+    padding: 1.6875rem 1.5625rem;
+    font-size: .9375rem;
+    border-radius: .3125rem;
+    &_author {
+        margin: 1.5625rem 0 0;
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        .author_info {
+            display: flex;
+            flex-direction: column;
+            gap: .125rem;
+            &_name {
+                font-size: .6875rem;
+                font-weight: 700;
+            }
+            &_profession {
+                font-size: .5rem;
+                font-weight: 700;
+            }
+        }
+    }
+    img {
+        width: 1.5625rem;
+        border-radius: 50%;
+    }
+}
+
+@media(max-width: 910px) {
+    .team_section {
+        padding: 11.75rem 0 21.25rem;
+        &_main {
+            text-align: center;
+            display: block;
+            img {
+                width: 18.75rem;
+            }
+        }
+        &_info {
+            text-align: left;
+            padding: .625rem .9375rem .625rem 1.625rem;
+            h2 {
+                width: auto;
+                font-size: 1.125rem;
+            }
+            p {
+                font-size: .875rem;
+            }
+            a {
+                width: 8.25rem;
+                margin: .75rem 0 0;
+                font-size: .75rem;
+                img {
+                    width: 1rem;
+                }
+            }
+        }
+    }
+
+    .testimonials {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.625rem;
+        &::before {
+            transform: scale(.38);
+            left: 1.875rem;
+            top: -1.875rem;
+        }
+    }
+
+    .testimonial_card {
+        width: 17.5rem;
+        padding: .875rem 1.25rem 1.125rem 1.25rem;
+        font-size: .625rem;
+        p {
+            line-height: 1.7;
+        }
+        &_author {
+            margin: 1.25rem 0 0;
+        }
+    }
+}
